@@ -10,7 +10,7 @@ function CarrouselPage() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={img1}
+          src={supra-3}
           alt="Primer slide"
           style={{height:'60vh'}}
         />
@@ -18,7 +18,7 @@ function CarrouselPage() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={img2}
+          src={volvo1}
           alt="Segundo slide"
           style={{height:'60vh'}}
         />
@@ -26,7 +26,7 @@ function CarrouselPage() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={img3}
+          src={wrx2}
           alt="Tercer slide"
           style={{height:'60vh'}}
         />
