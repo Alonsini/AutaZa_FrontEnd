@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar expand="lg" className="transparent-navbar" style={{ backgroundColor: 'transparent', boxShadow: 'none', border: 'none' }}>
       <Container>
         <Navbar.Brand href="/">Tiendaza</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,19 +1,27 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import CarrouselPage from '../components/organisms/CarrouselPage';
-import Cards from '../components/atoms/Cards';
+// src/pages/Home.jsx
+import React from "react";
+import HeroSection from "../components/organisms/HeroSection";
+import NewCarsSection from "../components/organisms/NewCarsSection";
+import FeaturesSection from "../components/organisms/FeaturesSection";
+import ContactSection from "../components/organisms/ContactSection";
+import Footer from "../components/organisms/Footer";
+import { useProducts } from "../context/ProductsContext";
 
 function Home() {
+  const { products } = useProducts();
+
+  const newCars = products.filter((p) => p.type === "new");
+  const usedCars = products.filter((p) => p.type === "used");
+
   return (
-       <div className='main-content'>
-      <CarrouselPage />
-      <Container className="my-5">
-        <h1>Productos destacados</h1>
-        <Cards />
-      </Container>
-    </div>
+    <>
+      <HeroSection />
+      <NewCarsSection products={newCars} />
+      <FeaturesSection />
+      <ContactSection />
+      <Footer />
+    </>
   );
 }
-
 
 export default Home;
