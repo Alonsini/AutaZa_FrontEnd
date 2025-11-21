@@ -1,26 +1,38 @@
 // src/pages/Home.jsx
-import React from "react";
-import HeroSection from "../components/organisms/HeroSection";
-import NewCarsSection from "../components/organisms/NewCarsSection";
-import FeaturesSection from "../components/organisms/FeaturesSection";
-import ContactSection from "../components/organisms/ContactSection";
-import Footer from "../components/organisms/Footer";
-import { useProducts } from "../context/ProductsContext";
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import Hero from "../components/organisms/Hero";
+import Cards from "../components/atoms/Cards";
+import ModalDetail from "../components/organisms/ModalDetail";
+import products from "../data/Products";
 
 function Home() {
-  const { products } = useProducts();
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const newCars = products.filter((p) => p.type === "new");
-  const usedCars = products.filter((p) => p.type === "used");
+  const handleShowDetail = (product) => {
+    setSelectedProduct(product);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedProduct(null);
+  };
 
   return (
-    <>
-      <HeroSection />
-      <NewCarsSection products={newCars} />
-      <FeaturesSection />
-      <ContactSection />
-      <Footer />
-    </>
+    <div className="main-content">
+      <Hero />
+      <Container className="my-5">
+        <h1>Productos destacados</h1>
+        <Cards products={products} onShowDetail={handleShowDetail} />
+      </Container>
+      <ModalDetail
+        show={showModal}
+        onHide={handleCloseModal}
+        product={selectedProduct}
+      />
+    </div>
   );
 }
 

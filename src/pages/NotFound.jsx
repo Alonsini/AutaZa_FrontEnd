@@ -1,23 +1,18 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Image from '../components/atoms/Image';
-
-const image = {
-    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLMSjfk8BbBLwEAf2T3zSpK8hhg8bMkHPww&s',
-    alt: 'Not Found Image',
-}
+import Button from '../components/atoms/Button';
+import Text from '../components/atoms/Text';
 
 function NotFound() {
   return (
-    <Container className="my-5">
-      <h1>Página no encontrada</h1>
-      <p>¿Estás seguro de que era aquí?</p>
-      
-      <Image src={image.src} alt={image.alt} className="" />
+    <Container className="my-5 text-center">
+      <Text variant="h1">404 - Página no encontrada</Text>
+      <Text variant="p">La página que buscas no existe.</Text>
+      <Button variant="primary" onClick={() => window.location.href = '/'}>
+        Volver al inicio
+      </Button>
     </Container>
   );
 }
-
-
 
 export default NotFound;

@@ -1,16 +1,13 @@
-
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import products from '../data/Products';
 import ProductCard from '../components/organisms/ProductCard';
 import Button from '../components/atoms/Button';
-import { useProducts } from "../context/ProductsContext";
 
 function Products() {
-  const { products } = useProducts();
   return (
     <Container className="my-5">
-      <h1>Productos</h1>
+      <h1>Autos</h1>
       <Row>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
