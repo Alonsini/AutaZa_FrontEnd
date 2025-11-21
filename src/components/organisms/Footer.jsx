@@ -1,40 +1,24 @@
-// src/components/organisms/Footer.jsx
-import React from "react";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
-function Footer() {
-  return (
-    <footer className="footer">
-      <div className="lx-container footer-grid">
-        <div>
-          <div className="footer-logo">LX</div>
-          <p className="footer-text">
-            Redefiniendo el futuro de la movilidad con vehículos premium de
-            última generación.
-          </p>
-        </div>
-        <div>
-          <h4 className="footer-heading">Modelos</h4>
-          <p className="footer-link">Sedanes</p>
-          <p className="footer-link">SUVs</p>
-          <p className="footer-link">Deportivos</p>
-          <p className="footer-link">Eléctricos</p>
-        </div>
-        <div>
-          <h4 className="footer-heading">Empresa</h4>
-          <p className="footer-link">Sobre Nosotros</p>
-          <p className="footer-link">Sustentabilidad</p>
-          <p className="footer-link">Carreras</p>
-          <p className="footer-link">Prensa</p>
-        </div>
-        <div>
-          <h4 className="footer-heading">Contacto</h4>
-          <p className="footer-link">+56 9 1234 5678</p>
-          <p className="footer-link">info@luxuryautos.cl</p>
-          <p className="footer-link">Av. Autos 123, Santiago</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
+const Footer = () => (
+  <footer className="bg-dark text-light py-4">
+    <Container>
+      <Row>
+        <Col md={6}>
+          <h5>Autaza corporation</h5>
+          <p>© 2025 Todos los derechos reservados.</p>
+        </Col>
+        <Col md={6} className="text-md-end">
+          <ul className="list-unstyled">
+            <li><a href="/about" className="text-light">Acerca de</a></li>
+            <li><a href="/contact" className="text-light">Contacto</a></li>
+            <li><a href="/privacy" className="text-light">Política de privacidad</a></li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
+  </footer>
+);
 
 export default Footer;

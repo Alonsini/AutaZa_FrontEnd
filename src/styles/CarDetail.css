@@ -1,0 +1,73 @@
+/* Car Detail Professional Dealer Style */
+.product-detail-row {
+  gap: 2rem;
+}
+.product-detail-gallery {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+.product-detail-main-img {
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.product-detail-thumbs {
+  margin-top: 1rem;
+}
+.product-detail-thumbs img {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+}
+.product-detail-thumbs img:hover {
+  border: 2px solid #222;
+}
+.product-detail-info {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+.product-detail-info h2 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.product-detail-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.2rem;
+}
+.product-detail-specs {
+  font-size: 1.08rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.product-detail-specs b {
+  color: #222;
+}
+.product-detail-info hr {
+  margin: 1.2rem 0;
+}
+.product-detail-info .elegant-btn, .product-detail-info button {
+  border-radius: 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.7rem 0;
+  margin-top: 1.2rem;
+}
+@media (max-width: 991px) {
+  .product-detail-row {
+    flex-direction: column;
+  }
+  .product-detail-info {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+  }
+}

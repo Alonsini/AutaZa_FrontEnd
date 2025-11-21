@@ -1,35 +1,16 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import Image from '../atoms/Image';
-import Button from '../atoms/Button';
-import CardBody from '../molecules/CardBody';
-import { useNavigate } from 'react-router-dom';
-import { useCart } from '../../context/CartContext';
+import '../../styles/HeroNavbar.css';
 
 function ProductCard({ product }) {
-  const navigate = useNavigate();
-  const { addToCart } = useCart();
-
-  const handleAddToCart = () => {
-    addToCart(product);
-    alert('Producto agregado al carrito');
-  };
-
   return (
-    <Card style={{ width: '18rem' }} className="m-2">
+    <Card style={{ width: '100%', maxWidth: '480px', margin: 'auto', transition: 'transform 0.2s, box-shadow 0.2s' }} className="m-3 product-card">
       <Image src={product.image} alt={product.name} className="card-img-top" />
-      <Card.Body>
-        <CardBody
-          title={product.name}
-          description={product.description}
-          price={product.price}
-        />
-        <Button variant="primary" onClick={() => navigate(`/products/${product.id}`)}>
-          Ver detalles
-        </Button>
-        <Button variant="success" className="mt-2" onClick={handleAddToCart}>
-          Agregar al carrito
-        </Button>
+      <Card.Body className="text-center">
+        <h4 className="product-card-title mb-2">{product.name}</h4>
+        <div className="product-card-specs-simple mb-2">{product.year} / {product.engine}</div>
+        <div className="product-card-price mb-2">CLP${product.price.toLocaleString('es-CL')}</div>
       </Card.Body>
     </Card>
   );

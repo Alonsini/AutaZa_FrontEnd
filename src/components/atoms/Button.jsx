@@ -12,7 +12,7 @@ function Button({ children, back, ...props }) {
       props.onClick(e);
     }
   };
-  return <BootstrapButton {...props} onClick={handleClick}>{children}</BootstrapButton>;
+  return <BootstrapButton {...props} onClick={handleClick} className={`elegant-btn ${props.className || ''}`}>{children}</BootstrapButton>;
 }
 
 export default Button;
