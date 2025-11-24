@@ -1,0 +1,50 @@
+.cons-container {
+  margin-top: 110px;
+  margin-bottom: 50px;
+}
+
+.cons-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+.cons-text {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.cons-card {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: none;
+}
+
+.cons-btn {
+  background-color: #202020 !important;
+  border: none !important;
+  padding: 10px 30px;
+}
+
+.cons-btn:hover {
+  background-color: #3a3a3a !important;
+}
+
+.cons-success {
+  text-align: center;
+  padding: 40px;
+  background: #e8ffe4;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cons-success h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c7c43;
+}

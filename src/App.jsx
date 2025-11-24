@@ -7,9 +7,11 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import SingUp from './pages/SingUp';
 import Login from './pages/Login';
 import Footer from './components/organisms/Footer';
+import SignUp from './pages/SignUp';
+import Consignaciones from "./pages/Consignaciones";
+import Developer from "./pages/Developer";
 
 function App() {
   return (
@@ -20,9 +22,11 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetail/>} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/SingUp" element={<SingUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/AddProduct" element={<Consignaciones />} />
+        <Route path="/developer" element={<Developer />} />
       </Routes>
       <Footer />
     </>

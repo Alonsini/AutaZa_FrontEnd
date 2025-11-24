@@ -1,59 +1,70 @@
-.addUser{
-    width: 25%;
-    margin: 50px auto;
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 8px rgba(0,0,0,0.065);
+.addUser {
+  width: 25%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.065);
 }
 
-
-
-.addUserForm .inputGroup{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.addUserForm .inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .addUserForm .inputGroup label {
-    margin-top: 10px;
+  margin-top: 15px;
+  font-weight: 600;
 }
 
 .addUserForm .inputGroup input {
-    margin-top: 5px;
-    padding: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.inputGroup button{
-    margin-top: 10px;
+.inputGroup button {
+  margin-top: 20px;
+  padding: 10px;
 }
 
-.login{
-    margin-top: 30px;
-    text-align: center;
+.login {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .login .btn-success {
-    width: 50%;
+  width: 50%;
 }
 
-.addUser h3{
-    text-align: center;
-    font-weight: bold;
-    color: rgb(1, 7, 22);
-    text-transform: uppercase;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.065);
-
+.addUser h3 {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(1, 7, 22);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.065);
 }
 
-.btn-primary, .btn-success {
+.btn-primary,
+.btn-success {
   background-color: #e0e0e0 !important;
   color: #222 !important;
   border: none !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: background 0.2s, color 0.2s;
 }
-.btn-primary:hover, .btn-success:hover {
+
+.btn-primary:hover,
+.btn-success:hover {
   background-color: #cccccc !important;
   color: #111 !important;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
 }
