@@ -1,17 +1,24 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
 const AuthContext = createContext();
-
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const developerEmails = [
+        "jav.calderon@Autaza.com",
+        "jai.barrales@Autaza.com",
+        "alo.madrid@Autaza.com"
+    ];
 
     useEffect(() => {
-        const userData = localStorage.getItem('user');
+        const userData = localStorage.getItem("user");
         if (userData) {
-            setUser(JSON.parse(userData));
+            const parsed = JSON.parse(userData);
+
+            parsed.isDev = developerEmails.includes(parsed.email);
+
+            setUser(parsed);
         }
         setLoading(false);
     }, []);
@@ -19,9 +26,7 @@ export const AuthProvider = ({ children }) => {
     const login = (userData) => {
         const enhancedUser = {
             ...userData,
-            isDev: userData.email === "jav.calderon@Autaza.com",
-            isDev: userData.email === "jai.barrales@Autaza.com",
-            isDev: userData.email === "alo.madrid@Autaza.com"
+            isDev: developerEmails.includes(userData.email)
         };
 
         localStorage.setItem("user", JSON.stringify(enhancedUser));
@@ -29,21 +34,9 @@ export const AuthProvider = ({ children }) => {
     };
 
     const logout = () => {
-        localStorage.removeItem('user');
+        localStorage.removeItem("user");
         setUser(null);
     };
-
-    useEffect(() => {
-        const userData = localStorage.getItem("user");
-        if (userData) {
-            const parsed = JSON.parse(userData);
-            parsed.isDev = parsed.email === "jav.calderon@Autaza.com";
-            parsed.isDev = parsed.email === "jai.barrales@Autaza.com";
-            parsed.isDev = parsed.email === "alo.madrid@Autaza.com";
-            setUser(parsed);
-        }
-        setLoading(false);
-    }, []);
 
     return (
         <AuthContext.Provider value={{ user, login, logout, loading }}>
