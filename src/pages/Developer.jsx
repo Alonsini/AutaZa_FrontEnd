@@ -3,7 +3,7 @@ import UsuarioService from "../services/UsuarioService";
 import ProductoService from "../services/ProductoService";
 import VentaService from "../services/VentaService";
 import ImagenService from "../services/ImagenService";
-import "../styles/developer.css";
+import "../styles/Developer.css";
 
 const Developer = () => {
   const [section, setSection] = useState(null);
