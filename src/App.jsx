@@ -12,6 +12,8 @@ import Footer from './components/organisms/Footer';
 import SignUp from './pages/SignUp';
 import Consignaciones from "./pages/Consignaciones";
 import Developer from "./pages/Developer";
+import DeveloperUsers from "./pages/DeveloperUsers";
+import DeveloperDatabase from "./pages/DeveloperDatabase";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/AddProduct" element={<Consignaciones />} />
         <Route path="/developer" element={<Developer />} />
+        <Route path="/developer/users" element={<DeveloperUsers />} />
+        <Route path="/developer/database" element={<DeveloperDatabase />} />
       </Routes>
       <Footer />
     </>

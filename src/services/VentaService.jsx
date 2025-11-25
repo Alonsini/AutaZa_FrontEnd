@@ -9,7 +9,7 @@ class VentaService {
     }
 
     getVentaById(idVenta) {
-        return axios.get(`${BASE_URL}/${id}`);
+        return axios.get(`${BASE_URL}/${idVenta}`);
     }
 
     createVenta(venta) {
@@ -17,11 +17,11 @@ class VentaService {
     }
 
     updateVenta(idVenta, venta) {
-        return axios.put(`${BASE_URL}/${id}`, venta);
+        return axios.put(`${BASE_URL}/${idVenta}`, venta);
     }
 
     deleteVenta(idVenta) {
-        return axios.delete(`${BASE_URL}/${id}`);
+        return axios.delete(`${BASE_URL}/${idVenta}`);
     }
 }
 

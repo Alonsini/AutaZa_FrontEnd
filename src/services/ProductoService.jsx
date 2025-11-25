@@ -25,4 +25,5 @@ class ProductoService {
     }
 
 }
+export default new ProductoService();
   
