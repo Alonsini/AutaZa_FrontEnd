@@ -56,7 +56,7 @@ const Developer = () => {
       {/* Contenido dinámico */}
       <div className="dev-content">
         
-        {/* 👉 USUARIOS REGISTRADOS */}
+        {/* USUARIOS REGISTRADOS */}
         {section === "usuarios" && (
           <>
             <h2>Usuarios Registrados</h2>
