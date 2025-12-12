@@ -11,7 +11,7 @@ function ProductDetail() {
   const navigate = useNavigate();
   const product = products.find((p) => p.id === parseInt(id));
 
-  // Si tienes más imágenes, ponlas en product.images, si no, usa solo product.image
+  // Si tienes más imágenes, ponlas en product.images, si no, usa solo product.image ouyea
   const images = product?.images || [product?.image];
 
   if (!product) {
