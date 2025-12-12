@@ -60,5 +60,5 @@ function ProductDetail() {
     </Container>
   );
 }
-
+//esto es un easter egg :b
 export default ProductDetail;
