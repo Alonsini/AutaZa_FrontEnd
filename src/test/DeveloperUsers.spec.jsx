@@ -1,16 +1,16 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import DeveloperDatabase from '../pages/DeveloperDatabase';
-import ProductoService from '../services/ProductoService';
+import DeveloperUsers from '../pages/DeveloperUsers';
+import UsuarioService from '../services/UsuarioService';
 
-describe('DeveloperDatabase Component', () => {
+describe('DeveloperUsers Component', () => {
   
   beforeEach(() => {
-    spyOn(ProductoService, 'getAllProductos').and.returnValue(Promise.resolve({ data: [] }));
+    spyOn(UsuarioService, 'getAllUsuarios').and.returnValue(Promise.resolve({ data: [] }));
   });
 
   it('debería renderizar', () => {
-    const { container } = render(<DeveloperDatabase />);
+    const { container } = render(<DeveloperUsers />);
     expect(container).toBeTruthy();
   });
 });
